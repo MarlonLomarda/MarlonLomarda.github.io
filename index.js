@@ -87,7 +87,7 @@ splitTypes.forEach((char, i) => {
     const bg = char.dataset.bgColor;
     const fg = char.dataset.fgColor;
 
-    const text = new SplitTypes(char, { types: "chars" });
+    const text = new SplitType(char, { types: "chars" });
 
     gsap.fromTo(
         text.chars,
@@ -96,7 +96,7 @@ splitTypes.forEach((char, i) => {
         },
         {
             color: fg,
-           duration: 0.3,
+            duration: 0.3,
             stagger: 0.2,
             scrollTrigger: {
                 trigger: char,
