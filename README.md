@@ -4,7 +4,7 @@ FINALS PERFORMANCE TASK IN IPT 101
 
 Purrfect is a beautifully designed and user-friendly pet adoption website that connects loving pets with their forever homes. This project was created to simplify the adoption process and provide a seamless experience for both adopters and pets.
 
-Members: 
-Art Gabriel Gonzales <br>
-Chasley Tanabe <br>
-Ismael Marlon Lomarda - LEADER
+Members: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Art Gabriel Gonzales <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Chasley Tanabe <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ismael Marlon Lomarda - LEADER
