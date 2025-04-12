@@ -64,24 +64,21 @@ sr.reveal(".footer-links", { delay: "500", origin: "left" });
 sr.reveal(".footer-contact-info", { delay: "500", origin: "right" });
 sr.reveal(".copyright", { delay: "600" });
 
-// GSAP SCROLL TRIGGER
-gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.create({
-    trigger: ".heropage",
-    start: "top center",
-    end: "center center",
-    scrub: 1,
-    onToogle: (self) => {
-        if (self.isActive) {
-            gsap.to(".hero-images img", { scale: 1, gap: "64px", duration: 0.5 });
-        } else {
-            gsap.to(".hero-images img", {
-                scale: "1.2",
-                gap: "35px",
-                duration: 0.5,
-            });
-        }
-    },
+// GSAP ScrollTrigger for Hero Images Zoom Effect
+gsap.utils.toArray(".hero-images img").forEach((img) => {
+  gsap.fromTo(
+    img,
+    { scale: 1 }, // Initial scale
+    {
+      scale: 1.2, // Zoomed-in scale
+      scrollTrigger: {
+        trigger: img, // Trigger animation when the image enters the viewport
+        start: "top 80%", // Start animation when the top of the image is 80% down the viewport
+        end: "top 20%", // End animation when the top of the image is 20% down the viewport
+        scrub: true, // Smoothly tie animation to scroll
+      },
+    }
+  );
 });
 
 // ABOUT SPLIT TYPES
@@ -99,7 +96,7 @@ splitTypes.forEach((char, i) => {
         },
         {
             color: fg,
-            duration: 0.3,
+           duration: 0.3,
             stagger: 0.2,
             scrollTrigger: {
                 trigger: char,

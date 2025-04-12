@@ -54,7 +54,7 @@
         <a href="index.html#requirements">Requirements</a>
         <a href="index.html#about">About</a>
         <a href="index.html#stories">Stories</a>
-        <a href="profile.html">Profile</a>
+        <a href="profile.html" id="profile-btn">Profile</a>
       </div>
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
@@ -102,7 +102,7 @@
               </div>
 
               <!-- r item 3 -->
-               <div class="c-item">
+               <div class="r-item">
                 <div class="r-logo" style="background-color: #ff8846">
                   <i class="fa-solid fa-paw"></i>
                 </div>
@@ -140,14 +140,7 @@
         <div class="pets-collection">
           <!-- Sir Woofs -->
           <div class="pet-item">
-            <a href="pet-profile.html?pet=sir-woofs" 
-               data-pet-id="sir-woofs" 
-               data-name="Sir Woofs" 
-               data-age="2 years old" 
-               data-gender="Male" 
-               data-breed="Shiba Inu" 
-               data-description="A playful and loyal companion." 
-               data-fun-facts="Loves playing fetch and enjoys belly rubs.">
+            <a href="#" data-pet-id="sir-woofs">
               <img src="img/pet-item-1.png" alt="Sir Woofs" />
             </a>
             <h3>Sir Woofs</h3>
@@ -155,14 +148,7 @@
 
           <!-- Captain Squaks -->
           <div class="pet-item">
-            <a href="pet-profile.html?pet=captain-squaks" 
-               data-pet-id="captain-squaks" 
-               data-name="Captain Squaks" 
-               data-age="1 year old" 
-               data-gender="Male" 
-               data-breed="Rainbow Lorikeet" 
-               data-description="A talkative and colorful bird." 
-               data-fun-facts="Can mimic human speech and loves sunflower seeds.">
+            <a href="#" data-pet-id="captain-squaks">
               <img src="img/pet-item-2.png" alt="Captain Squaks" />
             </a>
             <h3>Captain Squaks</h3>
@@ -170,14 +156,7 @@
 
           <!-- Professor Meow -->
           <div class="pet-item">
-            <a href="pet-profile.html?pet=professor-meow" 
-               data-pet-id="professor-meow" 
-               data-name="Professor Meow" 
-               data-age="3 years old" 
-               data-gender="Male" 
-               data-breed="Orange Tabby Cat" 
-               data-description="A calm and affectionate feline." 
-               data-fun-facts="Enjoys napping in the sun and chasing laser pointers.">
+            <a href="#" data-pet-id="professor-meow">
               <img src="img/pet-item-3.png" alt="Professor Meow" />
             </a>
             <h3>Professor Meow</h3>
@@ -201,16 +180,6 @@
           <p><strong>Age:</strong> <span id="pet-age"></span></p>
           <p><strong>Description:</strong> <span id="pet-description"></span></p>
           <p><strong>Fun Facts:</strong> <span id="pet-fun-facts"></span></p>
-
-          <!-- Email Form -->
-          <form id="adoption-form">
-            <h3>Send an Email for Adoption</h3>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required />
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Send Email</button>
-          </form>
         </div>
         <!-- Pet Details Section End -->
 
