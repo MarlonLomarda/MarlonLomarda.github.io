@@ -975,7 +975,7 @@ h1 {
 }
 
 .auth-page {
-  background-image: url("img/pets.PNG"); /* Use the same background image as index.html */
+  background-image: url("img/pets2.PNG"); /* Use the same background image as index.html */
   background-size: cover; /* Ensures the image covers the entire background */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
