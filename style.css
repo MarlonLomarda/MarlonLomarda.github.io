@@ -158,16 +158,28 @@ nav.sticky {
   width: 205px;
   height: 53px;
   background-color: var(--black);
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   border-radius: 12px;
   border: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adds spacing between text and icon */
   transition: all 0.2s ease-out;
 }
 
 .btn-3:hover {
   background-color: var(--accent);
   border: 1px solid var(--accent);
+}
+
+.btn-3 a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds spacing between text and icon */
 }
 
 .btn-transparent:hover {
