@@ -93,15 +93,15 @@ footer .btn-back {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
-  font-weight: 700;
-  color: white;
+  font-weight: 1000;
+  color: rgb(252, 143, 2);
   background-color: var(--black);
   border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none
+  transition background-color 0.3s ease, transform 0.2s ease;
 }
 
 footer .btn-back:hover {
   background-color: var(--accent);
-  transform: scale(1.05);
+  transform: scale(1.10);
 }
