@@ -1,10 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const backButton = document.querySelector(".btn-back");
-
-  if (backButton) {
-    backButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.location.href = "findmore.html"; // Redirect to the Find More Pets page
-    });
-  }
-});
+    const adoptionForm = document.getElementById("adoption-form");
+  
+    if (adoptionForm) {
+      adoptionForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent form submission
+  
+        // Display confirmation message
+        alert("Your adoption request for Admiral Finley has been submitted successfully!");
+  
+        // Redirect to the home page
+        window.location.href = "index.html";
+      });
+    }
+  });
