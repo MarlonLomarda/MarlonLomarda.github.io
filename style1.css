@@ -168,7 +168,7 @@ header h1 {
 
 /* Background for Professor Meow's Profile Page */
 body.profile-page.professor-meow {
-  background-image: url("img/professormeow.png");
+  background-image: url("img/professormeow.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
