@@ -1,35 +1,73 @@
 body.profile-page.professor-meow {
-  background-image: url("img/professormeow.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
+    background-image: url("img/professormeow.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  
+  .pet-profile {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  .pet-details img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .pet-details h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .pet-details p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0;
+  }
 
-.pet-profile {
-  max-width: 800px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin: 50px auto;
-}
-
-.pet-details img {
-  max-width: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.pet-details h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.pet-details p {
-  font-size: 1.2rem;
-  color: #555;
-  margin: 5px 0;
-}
+/* Adoption Section */
+.adoption-section h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  #adoption-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  #adoption-form input,
+  #adoption-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #adoption-form button {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #adoption-form button:hover {
+    background-color: #2575fc; 
+  }
