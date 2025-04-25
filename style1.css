@@ -165,3 +165,12 @@ header h1 {
 .adoption-section button:hover {
   background-color: #45a049;
 }
+
+/* Background for Professor Meow's Profile Page */
+body.profile-page.professor-meow {
+  background-image: url("img/professormeow.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
