@@ -1,61 +1,61 @@
 /* For Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"); /* Importing Nunito Sans font from Google Fonts */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
+  margin: 0; /* Reset margin for all elements */
+  padding: 0; /* Reset padding for all elements */
+  box-sizing: border-box; /* Set box-sizing to border-box for all elements */
+  font-family: "Nunito Sans", sans-serif; /* Set default font family */
 }
 
 :root {
-  --accent: #ff9a24;
-  --black: #131313;
+  --accent: #ff9a24; /* Accent color for buttons and highlights */
+  --black: #131313; /* Main text color */
 }
 body {
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure body takes full height */
   padding-top: 80px; /* Adjust based on your navbar height */
 }
 
 section {
-  min-width: 100%;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  min-width: 100%;  /* Ensure sections take full width */
+  min-height: 100vh;  /* Ensure sections take full height */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-position: center;  /* Center the background image */
+  background-size: cover; /* Cover the entire section */
 }
 
 /* Navbar Section */
 nav {
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 0;
+  z-index: 999; /* Ensure navbar is on top of other elements */
+  position: fixed;  /* Fixed position for sticky effect */
+  top: 0; /* Stick to the top */
+  left: 0;  /* Align to the left */
   width: 100%; /* Ensure it covers the full width */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--black);
-  background-color: white;
+  display: flex;  /* Flexbox for layout */
+  justify-content: space-between; /* Space between brand and menu */
+  align-items: center;  /* Center items vertically */
+  color: var(--black);  /* Text color */
+  background-color: white; /* Default background color */
   padding: 20px 50px; /* Adjust as needed */
-  transition: all 0.4s ease-out;
-  filter: drop-shadow(5px 5px 10px transparent);
+  transition: all 0.4s ease-out;  /* Smooth transition for background color */
+  filter: drop-shadow(5px 5px 10px transparent);  /* Initial shadow effect */
 }
 
 nav.sticky {
-  background-color: white;
-  filter: drop-shadow(5px 5px 10px #ffbe745e);
+  background-color: white; /* Change to white when sticky */
+  filter: drop-shadow(5px 5px 10px #ffbe745e); /* Add shadow when sticky */
 }
 
 .brand {
-  text-decoration: none;
-  transition: all ease-in-out 0.3s;
-  color: var(--black);
+  text-decoration: none;  /* Remove underline from links */
+  transition: all ease-in-out 0.3s; /* Smooth transition for hover effects */
+  color: var(--black);  /* Text color */
 }
 
 .brand h1 {
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 32px;  /* Font size for brand name */
+  font-weight: 900; /* Bold font weight */
 }
 
 .accent {
@@ -81,18 +81,18 @@ nav.sticky {
   font-size: 24px;
   font-weight: 400;
   border-radius: 32px;
-  background-color: white;
+  background-color: white; /* Default background color */
   padding: 10px;
   transition: all 0.2s ease-out;
 }
 
 .menu a:hover {
   background-color: var(--accent);
-  color: white;
+  color: white; /* Change text color on hover */
 }
 
 .btn {
-  color: white;
+  color: white; /* Default text color */
   font-size: 25px;
   cursor: pointer;
   display: none;
@@ -158,28 +158,16 @@ nav.sticky {
   width: 205px;
   height: 53px;
   background-color: var(--black);
-  font-size: 20px;
+  font-size: 24px;
   color: white;
   border-radius: 12px;
   border: 1px solid var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; /* Adds spacing between text and icon */
   transition: all 0.2s ease-out;
 }
 
 .btn-3:hover {
   background-color: var(--accent);
   border: 1px solid var(--accent);
-}
-
-.btn-3 a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Adds spacing between text and icon */
 }
 
 .btn-transparent:hover {
@@ -271,7 +259,7 @@ nav.sticky {
 
 .pets-headlines i {
   font-size: 56px;
-  color: #7291ff;
+  color: #7291ff; /* Adjusted color for the icon */
 }
 
 .pets-headlines h1 {
@@ -307,7 +295,7 @@ nav.sticky {
 
 .pet-item img:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Pets Section - Pet Names */
@@ -316,12 +304,12 @@ nav.sticky {
   margin-top: 10px;
   font-size: 1.5rem; /* Increased font size */
   font-weight: 800;
-  color: #333;
+  color: #333; /* Darker color for better readability */
   transition: color 0.3s ease;
 }
 
 .pet-item:hover h3 {
-  color: #6a11cb;
+  color: #6a11cb; /* Change color on hover */
 }
 
 .btn-pets {
@@ -342,8 +330,8 @@ nav.sticky {
   background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fancy gradient */
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Light shadow */
+  color: white; /* Light text color */
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -356,7 +344,7 @@ nav.sticky {
   left: -50px;
   width: 200px;
   height: 200px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1); /* Light gradient */
   border-radius: 50%;
   z-index: 0;
 }
@@ -368,7 +356,7 @@ nav.sticky {
   right: -50px;
   width: 200px;
   height: 200px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1); /* Light gradient */
   border-radius: 50%;
   z-index: 0;
 }
@@ -386,21 +374,21 @@ nav.sticky {
   max-width: 250px;
   height: auto;
   border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 5px solid rgba(255, 255, 255, 0.8); /* Light border */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Light shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pet-details img:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .pet-details h1 {
   font-size: 40px;
   font-weight: 900;
-  color: #ffe5b4;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  color: #ffe5b4; /* Light shade for headings */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Shadow for text */
 }
 
 .pet-details p {
@@ -410,7 +398,7 @@ nav.sticky {
 }
 
 .pet-details p strong {
-  color: #ffdd99;
+  color: #ffdd99; /* Lighter shade for strong text */
 }
 
 .pet-details span {
@@ -419,23 +407,23 @@ nav.sticky {
 
 #adoption-form {
   margin-top: 30px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9); /* Light background */
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Light shadow */
 }
 
 #adoption-form h3 {
   font-size: 24px;
   margin-bottom: 15px;
-  color: #333;
+  color: #333; /* Darker text for headings */
 }
 
 #adoption-form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555;
+  color: #555; /* Darker text for labels */
 }
 
 #adoption-form input,
@@ -443,14 +431,14 @@ nav.sticky {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Light border */
   border-radius: 6px;
   font-size: 16px;
 }
 
 #adoption-form button {
-  background-color: #6a11cb;
-  color: white;
+  background-color: #6a11cb; /* Darker shade */
+  color: white; /* Light text color */
   border: none;
   padding: 12px 24px;
   font-size: 18px;
@@ -460,7 +448,7 @@ nav.sticky {
 }
 
 #adoption-form button:hover {
-  background-color: #2575fc;
+  background-color: #2575fc; /* Lighter shade */
   transform: scale(1.05);
 }
 
@@ -468,16 +456,16 @@ nav.sticky {
 .adoption-requests {
   margin-top: 40px;
   padding: 30px;
-  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Light gradient */
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 .adoption-requests h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #333;
-  text-align: center;
+  color: #333; /* Darker text for headings */
+  text-align: center; /* Centered text */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -487,25 +475,25 @@ nav.sticky {
   padding: 20px;
   margin-bottom: 15px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ffecd2, #fcb69f);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Light gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .adoption-request:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .adoption-request p {
   margin: 8px 0;
   font-size: 1.1rem;
-  color: #555;
+  color: #555; /* Darker text for better readability */
   font-weight: 600;
 }
 
 .adoption-request p strong {
-  color: #ff6f61;
+  color: #ff6f61; /* Accent color for strong text */
   font-weight: 700;
 }
 
@@ -606,7 +594,7 @@ nav.sticky {
 
 .testimony-people i {
   font-size: 50px;
-  color: #ff5353;
+  color: #ff5353; /* Adjusted color for the icon */
 }
 
 .testimony-name {
@@ -630,8 +618,8 @@ nav.sticky {
 
 /* Footer CSS */
 footer {
-  background-color: black;
-  color: white;
+  background-color: black; /* Dark background for the footer */
+  color: white; /* Light text color */
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -647,7 +635,7 @@ footer {
 .footer-links {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
   justify-content: center;
   padding: 32px 50px;
 }
@@ -669,7 +657,7 @@ footer {
 }
 
 .links a {
-  color: white;
+  color: white; /* Light text color */
   text-decoration: none;
   transition: all 0.3s ease-out;
 }
@@ -682,7 +670,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
   border-top: none;
   padding: 32px 120px;
 }
@@ -703,8 +691,8 @@ footer {
 }
 
 .socials a {
-  color: white;
-  border: 1px solid white;
+  color: white; /* Light text color */
+  border: 1px solid white; /* Light border */
   border-radius: 12px;
   padding: 8px 12px;
   background-color: var(--black);
@@ -720,7 +708,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
   padding: 32px 50px;
 }
 
@@ -753,16 +741,16 @@ h1 {
   padding: 40px;
   max-width: 900px;
   margin: 40px auto;
-  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Light gradient */
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Light shadow */
   font-family: "Nunito Sans", sans-serif;
 }
 
 .profile h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+  color: #333; /* Darker text for headings */
   font-size: 2.8rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -773,16 +761,16 @@ h1 {
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  background: linear-gradient(135deg, #f3f4f6, #ffffff); /* Light gradient */
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Light shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-container:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .profile-picture img {
@@ -790,26 +778,26 @@ h1 {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #6a11cb;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 5px solid #6a11cb; /* Accent border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-picture img:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .user-info {
   flex: 1;
-  color: #555;
+  color: #555; /* Darker text for better readability */
 }
 
 .user-info h2 {
   margin-bottom: 15px;
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: #333; /* Darker text for headings */
 }
 
 .user-info p {
@@ -819,7 +807,7 @@ h1 {
 }
 
 .user-info p strong {
-  color: #6a11cb;
+  color: #6a11cb; /* Accent color for strong text */
 }
 
 .user-info ul {
@@ -831,7 +819,7 @@ h1 {
 .user-info ul li {
   margin-bottom: 5px;
   font-size: 1rem;
-  color: #666;
+  color: #666; /* Darker text for better readability */
 }
 
 /* Form Container */
@@ -839,9 +827,9 @@ h1 {
   max-width: 400px;
   margin: 50px auto;
   padding: 30px;
-  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  background: linear-gradient(135deg, #ffffff, #f3f4f6); /* Light gradient */
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Light shadow */
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -854,7 +842,7 @@ h1 {
   right: -50px;
   width: 150px;
   height: 150px;
-  background: rgba(106, 17, 203, 0.2);
+  background: rgba(106, 17, 203, 0.2); /* Light gradient */
   border-radius: 50%;
   z-index: 0;
 }
@@ -866,7 +854,7 @@ h1 {
   left: -50px;
   width: 150px;
   height: 150px;
-  background: rgba(37, 117, 252, 0.2);
+  background: rgba(37, 117, 252, 0.2); /* Light gradient */
   border-radius: 50%;
   z-index: 0;
 }
@@ -875,7 +863,7 @@ h1 {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 20px;
-  color: #333;
+  color: #333; /* Darker text for headings */
   z-index: 1;
   position: relative;
 }
@@ -884,7 +872,7 @@ h1 {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555;
+  color: #555; /* Darker text for labels */
   text-align: left;
   z-index: 1;
   position: relative;
@@ -894,7 +882,7 @@ h1 {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Light border */
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -903,16 +891,16 @@ h1 {
 }
 
 .form-container input:focus {
-  border-color: #6a11cb;
+  border-color: #6a11cb; /* Accent color */
   outline: none;
-  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5); /* Light shadow */
 }
 
 .form-container button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: white;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);  /* Fancy gradient */
+  color: white; /* Light text color */
   border: none;
   border-radius: 8px;
   font-size: 18px;
@@ -924,28 +912,28 @@ h1 {
 }
 
 .form-container button:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Lighter gradient */
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.3);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.3); /* Enhanced shadow on hover */
 }
 
 .form-container p {
   margin-top: 15px;
   font-size: 14px;
-  color: #555;
+  color: #555; /* Darker text for better readability */
   z-index: 1;
   position: relative;
 }
 
 .form-container p a {
-  color: #6a11cb;
+  color: #6a11cb; /* Accent color */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .form-container p a:hover {
-  color: #2575fc;
+  color: #2575fc; /* Lighter shade on hover */
 }
 
 /* Add some spacing for mobile responsiveness */
@@ -971,8 +959,8 @@ h1 {
 
 /* Logout Button Styling */
 #logout-button {
-  background-color: #ff6f61;
-  color: white;
+  background-color: #ff6f61; /* Accent color */
+  color: white; /* Light text color */
   border: none;
   padding: 12px 24px;
   font-size: 16px;
@@ -982,19 +970,6 @@ h1 {
 }
 
 #logout-button:hover {
-  background-color: #e55b50;
+  background-color: #e55b50; /* Darker shade on hover */
   transform: scale(1.05);
-}
-
-.auth-page {
-  background-image: url("img/pets2.PNG"); /* Use the same background image as index.html */
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  min-height: 100vh; /* Ensures the background covers the full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif; /* Optional: Set a font for the page */
-  margin: 0; /* Remove default margin */
 }
