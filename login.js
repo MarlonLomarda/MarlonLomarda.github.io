@@ -24,5 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Invalid email or password. Please try again.");
       }
     });
+
+    // Add "Show Password" feature
+    const showPasswordCheckbox = document.getElementById("show-password");
+    const passwordField = document.getElementById("password");
+
+    if (showPasswordCheckbox) {
+      showPasswordCheckbox.addEventListener("change", () => {
+        passwordField.type = showPasswordCheckbox.checked ? "text" : "password";
+      });
+    }
   }
 });

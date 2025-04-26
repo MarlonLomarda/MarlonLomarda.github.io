@@ -30,5 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Account created successfully! Redirecting to login...");
       window.location.href = "login.html";
     });
+
+    // Add "Show Password" feature
+    const showPasswordCheckbox = document.getElementById("show-password");
+    const passwordFields = document.querySelectorAll('input[type="password"]');
+
+    if (showPasswordCheckbox) {
+      showPasswordCheckbox.addEventListener("change", () => {
+        passwordFields.forEach((field) => {
+          field.type = showPasswordCheckbox.checked ? "text" : "password";
+        });
+      });
+    }
   }
 });

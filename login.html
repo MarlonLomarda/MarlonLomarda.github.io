@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
+  <script src="login.js" defer></script>
 </head>
 <body class="auth-page">
   <div class="form-container">
@@ -12,14 +13,18 @@
     <form id="login-form">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
-
+      
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
-
+      
+      <!-- Show Password Checkbox -->
+      <label>
+        <input type="checkbox" id="show-password"> Show Password
+      </label>
+      
       <button type="submit">Login</button>
     </form>
-    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
   </div>
-  <script src="login.js"></script>
 </body>
 </html>
