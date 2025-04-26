@@ -10,16 +10,13 @@ body {
     color: #333; /* Default text color */
   }
 
-header {
+  header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(251, 92, 0); /* Ensure text is readable */
   text-align: center;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.8);
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(234, 156, 11);
-  background-image: linear-gradient(90deg, rgba(234, 156, 11, 1) 0%, rgba(255, 255, 255, 0.8) 100%);
-  background-blend-mode: overlay;
+  padding: 50px 20px;
 }
 
 header h1 {
@@ -31,7 +28,8 @@ header h1 {
 header p {
   font-size: 1.2rem;
   font-weight: 400;
-  color: #555;
+  font-family: "Roboto", sans-serif;
+  color: #6fff00;
 }
 
 /* Pets Collection Section */
