@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile | Purrfect</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="index.html" class="brand">
+        <h1>Purr <b class="accent">fect</b></h1>
+      </a>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#pets">Pets</a>
+        <a href="index.html#requirements">Requirements</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#stories">Stories</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </nav>
+    <!-- Profile Content -->
+    <section class="profile">
+      <h1>Your Profile</h1>
+      <div class="profile-container">
+        <!-- Profile Picture -->
+        <div class="profile-picture">
+          <img src="img/user.jpg" />
+        </div>
+        <!-- User Info -->
+        <div class="user-info">
+          <h2>John Doe</h2>
+          <p><strong>Email:</strong> johndoe@gmail.com</p>
+          <p><strong>Phone:</strong> +123-456-7890</p>
+          <p><strong>Adoption History:</strong></p>
+          <p>You have no adoption history yet. Start your journey by adopting your first pet!</p>
+        </div>
+      </div>
+    </section>
+    <section class="adoption-requests">
+      <h2>Adoption Requests</h2>
+      <div id="adoption-requests-container">
+        <p>No adoption requests yet.</p>
+      </div>
+      <!-- Logout Button -->
+      <div class="logout-container">
+        <button id="logout-button">Logout</button>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="copyright">All Rights Reserved to <b>Purrfect Org 2025</b></p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("adoption-requests-container");
+        const adoptionRequests = JSON.parse(localStorage.getItem("adoptionRequests")) || [];
+
+        if (adoptionRequests.length === 0) {
+          container.innerHTML = "<p>No adoption requests yet.</p>";
+        } else {
+          container.innerHTML = adoptionRequests
+            .map(
+              (request) => `
+              <div class="adoption-request">
+                <p><strong>Pet:</strong> ${request.petName}</p>
+                <p><strong>Status:</strong> ${request.status}</p>
+              </div>
+            `
+            )
+            .join("");
+        }
+
+        // Logout button functionality
+        const logoutButton = document.getElementById("logout-button");
+        logoutButton.addEventListener("click", function () {
+          // Redirect to login page
+          window.location.href = "login.html";
+        });
+      });
+    </script>
+  </body>
+</html>
