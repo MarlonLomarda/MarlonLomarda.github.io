@@ -1,15 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const adoptionForm = document.getElementById("adoption-form");
-
-  if (adoptionForm) {
-    adoptionForm.addEventListener("submit", (e) => {
-      e.preventDefault(); // Prevent form submission
-
-      // Display confirmation message
-      alert("Your adoption request for Colonel Nibbles has been submitted successfully!");
-
-      // Redirect to the home page
-      window.location.href = "index.html";
-    });
+  // Check if the user is logged in
+  const userData = JSON.parse(localStorage.getItem("user"));
+  if (!userData) {
+    alert("You must be logged in to submit an adoption request.");
+    window.location.href = "login.html";
+    return;
   }
+
+  // Handle adoption request submission
+  const adoptionForm = document.getElementById("adoption-form");
+  adoptionForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const petName = "Colonel Nibbles"; // Hardcoded pet name for this profile
+    const adoptionRequests = JSON.parse(localStorage.getItem("adoptionRequests")) || [];
+
+    // Add the new adoption request
+    adoptionRequests.push({
+      email: userData.email, // Logged-in user's email
+      petName: petName,
+      status: "Pending", // Default status
+      message: document.getElementById("message").value, // User's message
+    });
+
+    // Save the updated requests to localStorage
+    localStorage.setItem("adoptionRequests", JSON.stringify(adoptionRequests));
+
+    alert(`Your adoption request for ${petName} has been submitted!`);
+    adoptionForm.reset(); // Clear the form
+
+    // Redirect to index.html
+    window.location.href = "index.html";
+  });
 });
