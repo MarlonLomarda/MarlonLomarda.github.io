@@ -992,6 +992,7 @@ label[for="show-password"] input[type="checkbox"] {
   margin: 0; /* Removes any default margin */
 }
 
+/*Delete Request Section */
 .adoption-request {
   display: flex; /* Use Flexbox for alignment */
   justify-content: space-between; /* Space between text and icon */
