@@ -991,3 +991,19 @@ label[for="show-password"] input[type="checkbox"] {
   vertical-align: middle; /* Ensures the checkbox aligns with the text */
   margin: 0; /* Removes any default margin */
 }
+
+/* Style for the delete button */
+.delete-request {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-request:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
