@@ -40,14 +40,24 @@ document.addEventListener("DOMContentLoaded", function () {
       if (userRequests.length > 0) {
         container.innerHTML = userRequests
           .map(
-            (request) => `
-            <div class="adoption-request">
+            (request, index) => `
+            <div class="adoption-request" data-index="${index}">
               <p><strong>Pet:</strong> ${request.petName}</p>
               <p><strong>Status:</strong> ${request.status}</p>
+              <button class="delete-request" data-index="${index}">Delete</button>
             </div>
           `
           )
           .join("");
+  
+        // Add event listeners to delete buttons
+        const deleteButtons = document.querySelectorAll(".delete-request");
+        deleteButtons.forEach((button) => {
+          button.addEventListener("click", (e) => {
+            const requestIndex = e.target.getAttribute("data-index");
+            deleteAdoptionRequest(requestIndex);
+          });
+        });
       } else {
         container.innerHTML = "<p>No adoption requests yet.</p>";
       }
@@ -60,4 +70,23 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.removeItem("user");
       window.location.href = "login.html";
     });
+  
+    // Function to delete an adoption request
+    function deleteAdoptionRequest(index) {
+      const adoptionRequests = JSON.parse(localStorage.getItem("adoptionRequests")) || [];
+      const userRequests = adoptionRequests.filter((request) => request.email === userData.email);
+  
+      // Remove the selected request
+      userRequests.splice(index, 1);
+  
+      // Update the global adoptionRequests array
+      const updatedRequests = adoptionRequests.filter((request) => request.email !== userData.email).concat(userRequests);
+  
+      // Save the updated requests back to localStorage
+      localStorage.setItem("adoptionRequests", JSON.stringify(updatedRequests));
+  
+      // Refresh the UI
+      alert("Adoption request deleted successfully!");
+      location.reload();
+    }
   });
