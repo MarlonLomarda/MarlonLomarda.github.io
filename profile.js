@@ -44,16 +44,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="adoption-request" data-index="${index}">
               <p><strong>Pet:</strong> ${request.petName}</p>
               <p><strong>Status:</strong> ${request.status}</p>
-              <button class="delete-request" data-index="${index}">Delete</button>
+              <i class="fa fa-trash delete-request" data-index="${index}" title="Delete"></i>
             </div>
           `
           )
           .join("");
   
-        // Add event listeners to delete buttons
-        const deleteButtons = document.querySelectorAll(".delete-request");
-        deleteButtons.forEach((button) => {
-          button.addEventListener("click", (e) => {
+        // Add event listeners to trashcan icons
+        const deleteIcons = document.querySelectorAll(".delete-request");
+        deleteIcons.forEach((icon) => {
+          icon.addEventListener("click", (e) => {
             const requestIndex = e.target.getAttribute("data-index");
             deleteAdoptionRequest(requestIndex);
           });

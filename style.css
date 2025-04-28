@@ -992,18 +992,42 @@ label[for="show-password"] input[type="checkbox"] {
   margin: 0; /* Removes any default margin */
 }
 
-/* Style for the delete button */
+.adoption-request {
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: space-between; /* Space between text and icon */
+  align-items: center; /* Align items vertically in the center */
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Light gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adoption-request:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.adoption-request p {
+  margin: 0; /* Remove default margin */
+  font-size: 1.1rem;
+  color: #555; /* Darker text for better readability */
+  font-weight: 600;
+}
+
+.adoption-request p strong {
+  color: #ff6f61; /* Accent color for strong text */
+  font-weight: 700;
+}
+
 .delete-request {
-  background-color: #007bff; /* Blue background */
-  color: white; /* White text */
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
+  color: #007bff; /* Blue color */
+  font-size: 20px; /* Adjust size */
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .delete-request:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  color: #0056b3; /* Darker blue on hover */
 }
