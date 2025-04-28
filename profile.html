@@ -27,15 +27,17 @@
       <div class="profile-container">
         <!-- Profile Picture -->
         <div class="profile-picture">
-          <img src="img/user.jpg" />
+          <img src="img/user.jpg" alt="User Profile Picture" />
         </div>
         <!-- User Info -->
         <div class="user-info">
-          <h2>John Doe</h2>
-          <p><strong>Email:</strong> johndoe@gmail.com</p>
-          <p><strong>Phone:</strong> +123-456-7890</p>
+          <h2 id="user-name">John Doe</h2>
+          <p><strong>Email:</strong> <span id="user-email">johndoe@gmail.com</span></p>
+          <p><strong>Phone:</strong> <span id="user-phone">+123-456-7890</span></p>
           <p><strong>Adoption History:</strong></p>
-          <p>You have no adoption history yet. Start your journey by adopting your first pet!</p>
+          <div id="adoption-history">
+            <p>You have no adoption history yet. Start your journey by adopting your first pet!</p>
+          </div>
         </div>
       </div>
     </section>
@@ -53,33 +55,6 @@
     <footer class="footer">
       <p class="copyright">All Rights Reserved to <b>Purrfect Org 2025</b></p>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const container = document.getElementById("adoption-requests-container");
-        const adoptionRequests = JSON.parse(localStorage.getItem("adoptionRequests")) || [];
-
-        if (adoptionRequests.length === 0) {
-          container.innerHTML = "<p>No adoption requests yet.</p>";
-        } else {
-          container.innerHTML = adoptionRequests
-            .map(
-              (request) => `
-              <div class="adoption-request">
-                <p><strong>Pet:</strong> ${request.petName}</p>
-                <p><strong>Status:</strong> ${request.status}</p>
-              </div>
-            `
-            )
-            .join("");
-        }
-
-        // Logout button functionality
-        const logoutButton = document.getElementById("logout-button");
-        logoutButton.addEventListener("click", function () {
-          // Redirect to login page
-          window.location.href = "login.html";
-        });
-      });
-    </script>
+    <script src="profile.js"></script>
   </body>
 </html>
