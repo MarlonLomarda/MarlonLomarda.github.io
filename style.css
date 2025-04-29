@@ -827,7 +827,7 @@ h1 {
   max-width: 400px;
   margin: 50px auto;
   padding: 30px;
-  background: linear-gradient(135deg, #ffffff, #f3f4f6); /* Light gradient */
+  background: rgba(255, 255, 255, 0.7); /* White background with 80% opacity */
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Light shadow */
   text-align: center;
@@ -1028,4 +1028,17 @@ label[for="show-password"] input[type="checkbox"] {
 
 .delete-request:hover {
   color: #0056b3; /* Darker blue on hover */
+}
+
+/*Background Image for sign amd login*/
+body.auth-page {
+  background-image: url('img/pets2.PNG'); /* Path to your background image */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 110vh; /* Sets the height to fill the viewport */
+  width: 100%; /* Ensures the width covers the entire screen */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  overflow-x: hidden; /* Prevents scrolling if the image overflows */
 }
