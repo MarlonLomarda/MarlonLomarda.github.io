@@ -1030,7 +1030,7 @@ label[for="show-password"] input[type="checkbox"] {
   color: #0056b3; /* Darker blue on hover */
 }
 
-/*Background Image for sign amd login*/
+/*Background Image for signup and login*/
 body.auth-page {
   background-image: url('img/pets2.PNG'); /* Path to your background image */
   background-size: cover; /* Ensures the image covers the entire screen */
