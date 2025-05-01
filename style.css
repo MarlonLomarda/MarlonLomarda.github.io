@@ -1042,3 +1042,36 @@ body.auth-page {
   padding: 0; /* Removes default padding */
   overflow-x: hidden; /* Prevents scrolling if the image overflows */
 }
+
+.button-group {
+  display: flex; /* Use Flexbox for alignment */
+  gap: 10px; /* Add space between buttons */
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+/* Button Styles */
+.button-group button {
+  padding: 10px 20px; /* Add padding for better button size */
+  font-size: 16px; /* Adjust font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+#save-button {
+  background-color: #007bff; /* Blue background for Save button */
+  color: white; /* White text */
+}
+
+#cancel-button {
+  background-color: #dc3545; /* Red background for Cancel button */
+  color: white; /* White text */
+}
+
+#save-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+#cancel-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
