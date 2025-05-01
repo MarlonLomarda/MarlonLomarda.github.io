@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("user-email").textContent = userData.email;
     document.getElementById("user-phone").textContent = userData.phone;
 
+    // Update profile picture
+    const profilePicture = document.querySelector(".profile-picture img");
+    profilePicture.src = userData.profilePicture || "img/user.jpg";
+
     // Populate adoption history
     const adoptionHistoryContainer = document.getElementById("adoption-history");
     const adoptionHistory = JSON.parse(localStorage.getItem("adoptionHistory")) || [];
