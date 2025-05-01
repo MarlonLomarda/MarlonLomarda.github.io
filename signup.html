@@ -27,7 +27,13 @@
       <input type="email" id="email" name="email" required>
       
       <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        pattern="(09\d{9}|\+639\d{9})" 
+        title="Invalid phone number. Please use the format 09123456789 or +639123456789." 
+        required>
       
       <label for="password">Password:</label>
       <input 

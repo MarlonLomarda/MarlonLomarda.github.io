@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const password = document.getElementById("password").value;
       const confirmPassword = document.getElementById("confirm-password").value;
 
+      // Validate phone number
+      if (!validatePhilippinePhoneNumber(phone)) {
+        alert("Invalid phone number. Please use the format 09123456789 or +639123456789.");
+        return;
+      }
+
       // Password validation
       if (password.length < 5) {
         alert("Password must be at least 5 characters long.");
@@ -42,5 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     }
+  }
+
+  /**
+   * Validates a Philippine phone number.
+   * Accepts numbers starting with 09 (local format) or +639 (international format).
+   *
+   * @param {string} phoneNumber - The phone number to validate.
+   * @returns {boolean} - Returns true if the phone number is valid, false otherwise.
+   */
+  function validatePhilippinePhoneNumber(phoneNumber) {
+    const regex = /^(09\d{9}|\+639\d{9})$/;
+    return regex.test(phoneNumber);
   }
 });
