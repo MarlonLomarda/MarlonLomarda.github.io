@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Edit Profile | Purrfect</title>
+  </head>
+  <body class="auth-page">
+    <div class="form-container">
+      <h1>Edit Profile</h1>
+      <form id="edit-profile-form">
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture" accept="image/*" />
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required />
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <div class="button-group">
+          <button type="button" id="save-button">Save</button>
+          <button type="button" id="cancel-button">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <script src="edit-profile.js"></script>
+  </body>
+</html>
