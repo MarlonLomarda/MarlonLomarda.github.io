@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Password Change Functionality
 document.addEventListener("DOMContentLoaded", () => {
   const passwordForm = document.getElementById("password-form");
   const passwordMessage = document.getElementById("password-message");
