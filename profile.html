@@ -47,6 +47,42 @@
         </div>
       </div>
     </section>
+
+    <!-- Password Management Section -->
+    <section class="password-management">
+      <h2>Manage Password</h2>
+      <form id="password-form">
+        <label for="current-password">Current Password:</label>
+        <input
+          type="password"
+          id="current-password"
+          placeholder="Enter current password"
+          required
+        />
+
+        <label for="new-password">New Password:</label>
+        <input
+          type="password"
+          id="new-password"
+          placeholder="Enter new password"
+          required
+        />
+
+        <label for="confirm-new-password">Confirm New Password:</label>
+        <input
+          type="password"
+          id="confirm-new-password"
+          placeholder="Confirm new password"
+          required
+        />
+
+        <div class="button-group">
+          <button type="submit" id="change-password-button">Change Password</button>
+        </div>
+      </form>
+      <p id="password-message" class="message"></p>
+    </section>
+
     <section class="adoption-requests">
       <h2>Adoption Requests</h2>
       <div id="adoption-requests-container">
