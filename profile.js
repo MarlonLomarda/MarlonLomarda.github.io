@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Password Change Functionality
+// Password Change Functionality to toggle  visibility of the password fields.
 document.addEventListener("DOMContentLoaded", () => {
   const passwordForm = document.getElementById("password-form");
   const passwordMessage = document.getElementById("password-message");
