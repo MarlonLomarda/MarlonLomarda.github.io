@@ -173,3 +173,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const passwordForm = document.getElementById("password-form");
+  const passwordMessage = document.getElementById("password-message");
+  const showPasswordCheckbox = document.getElementById("show-password");
+  const passwordFields = document.querySelectorAll(
+    "#current-password, #new-password, #confirm-new-password"
+  );
+
+  // Show Password Feature
+  if (showPasswordCheckbox) {
+    showPasswordCheckbox.addEventListener("change", () => {
+      passwordFields.forEach((field) => {
+        field.type = showPasswordCheckbox.checked ? "text" : "password";
+      });
+    });
+  }
+
+  if (passwordForm) {
+    passwordForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const currentPassword = document.getElementById("current-password").value;
+      const newPassword = document.getElementById("new-password").value;
+      const confirmNewPassword =
+        document.getElementById("confirm-new-password").value;
+
+      // Validate inputs (example logic)
+      if (newPassword !== confirmNewPassword) {
+        passwordMessage.textContent =
+          "New password and confirm password do not match.";
+        passwordMessage.classList.remove("success");
+        return;
+      }
+
+      if (newPassword.length < 5) {
+        passwordMessage.textContent =
+          "New password must be at least 5 characters long.";
+        passwordMessage.classList.remove("success");
+        return;
+      }
+
+      // Simulate password update
+      passwordMessage.textContent = "Password changed successfully!";
+      passwordMessage.classList.add("success");
+      passwordMessage.classList.remove("error");
+      passwordForm.reset();
+    });
+  }
+});

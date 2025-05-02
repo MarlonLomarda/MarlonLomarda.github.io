@@ -1143,3 +1143,19 @@ body.auth-page {
 .password-management .button-group button:hover {
   background-color: #0056b3;
 }
+
+label[for="show-password"] {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the checkbox and text */
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+label[for="show-password"] input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
