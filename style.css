@@ -1087,26 +1087,39 @@ body.auth-page {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
+/* Password Management Section */
 .password-management {
   margin-top: 20px;
   padding: 20px;
   background: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Set a fixed width for the form */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  text-align: center; /* Center-align text */
 }
 
 .password-management h2 {
   margin-bottom: 15px;
+  text-align: center; /* Center-align the heading */
+}
+
+.password-management form {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+  align-items: center; /* Center-align inputs */
 }
 
 .password-management form label {
-  display: block;
+  width: 100%; /* Make labels take full width */
+  text-align: left; /* Align labels to the left */
   margin-bottom: 5px;
   font-weight: bold;
 }
 
 .password-management form input {
-  width: 100%;
+  width: 100%; /* Make inputs take full width */
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -1114,7 +1127,7 @@ body.auth-page {
 }
 
 .password-management .button-group {
-  text-align: center;
+  text-align: center; /* Center-align the button group */
 }
 
 .password-management .button-group button {
@@ -1129,14 +1142,4 @@ body.auth-page {
 
 .password-management .button-group button:hover {
   background-color: #0056b3;
-}
-
-.message {
-  margin-top: 10px;
-  font-size: 14px;
-  color: red;
-}
-
-.message.success {
-  color: green;
 }
