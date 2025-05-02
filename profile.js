@@ -106,78 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const passwordForm = document.getElementById("password-form");
   const passwordMessage = document.getElementById("password-message");
-
-  if (passwordForm) {
-    passwordForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const currentPassword = document.getElementById("current-password").value;
-      const newPassword = document.getElementById("new-password").value;
-      const confirmNewPassword = document.getElementById("confirm-new-password").value;
-
-      // Retrieve stored user data
-      const userData = JSON.parse(localStorage.getItem("user"));
-
-      // Validate current password
-      if (currentPassword !== userData.password) {
-        passwordMessage.textContent = "Current password is incorrect.";
-        passwordMessage.classList.remove("success");
-        return;
-      }
-
-      // Validate new password and confirm password
-      if (newPassword !== confirmNewPassword) {
-        passwordMessage.textContent = "New password and confirm password do not match.";
-        passwordMessage.classList.remove("success");
-        return;
-      }
-
-      // Validate new password security requirements
-      if (newPassword.length < 5) {
-        passwordMessage.textContent = "New password must be at least 5 characters long.";
-        passwordMessage.classList.remove("success");
-        return;
-      }
-
-      // Simulate backend API call to update password
-      try {
-        const response = await fakeApiUpdatePassword(userData.email, newPassword);
-        if (response.success) {
-          // Update password in localStorage
-          userData.password = newPassword;
-          localStorage.setItem("user", JSON.stringify(userData));
-
-          passwordMessage.textContent = "Password changed successfully!";
-          passwordMessage.classList.add("success");
-          passwordMessage.classList.remove("error");
-
-          // Clear input fields
-          passwordForm.reset();
-        } else {
-          passwordMessage.textContent = response.message || "Failed to update password.";
-          passwordMessage.classList.remove("success");
-        }
-      } catch (error) {
-        passwordMessage.textContent = "An error occurred. Please try again.";
-        passwordMessage.classList.remove("success");
-      }
-    });
-  }
-
-  // Simulated backend API call
-  async function fakeApiUpdatePassword(email, newPassword) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ success: true });
-      }, 1000);
-    });
-  }
-});
-
-// Password Change Functionality to toggle  visibility of the password fields.
-document.addEventListener("DOMContentLoaded", () => {
-  const passwordForm = document.getElementById("password-form");
-  const passwordMessage = document.getElementById("password-message");
   const showPasswordCheckbox = document.getElementById("show-password");
   const passwordFields = document.querySelectorAll(
     "#current-password, #new-password, #confirm-new-password"
@@ -198,29 +126,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const currentPassword = document.getElementById("current-password").value;
       const newPassword = document.getElementById("new-password").value;
-      const confirmNewPassword =
-        document.getElementById("confirm-new-password").value;
+      const confirmNewPassword = document.getElementById("confirm-new-password").value;
 
-      // Validate inputs (example logic)
+      // Retrieve stored user data
+      const userData = JSON.parse(localStorage.getItem("user"));
+
+      // Validate current password
+      if (currentPassword !== userData.password) {
+        passwordMessage.textContent = "Current password is incorrect.";
+        passwordMessage.classList.remove("success");
+        passwordMessage.classList.add("error");
+        return;
+      }
+
+      // Validate new password and confirm password
       if (newPassword !== confirmNewPassword) {
-        passwordMessage.textContent =
-          "New password and confirm password do not match.";
+        passwordMessage.textContent = "New password and confirm password do not match.";
         passwordMessage.classList.remove("success");
+        passwordMessage.classList.add("error");
         return;
       }
 
+      // Validate new password security requirements
       if (newPassword.length < 5) {
-        passwordMessage.textContent =
-          "New password must be at least 5 characters long.";
+        passwordMessage.textContent = "New password must be at least 5 characters long.";
         passwordMessage.classList.remove("success");
+        passwordMessage.classList.add("error");
         return;
       }
 
-      // Simulate password update
-      passwordMessage.textContent = "Password changed successfully!";
-      passwordMessage.classList.add("success");
-      passwordMessage.classList.remove("error");
-      passwordForm.reset();
+      // Simulate backend API call to update password
+      try {
+        const response = await fakeApiUpdatePassword(userData.email, newPassword);
+        if (response.success) {
+          // Update password in localStorage
+          userData.password = newPassword;
+          localStorage.setItem("user", JSON.stringify(userData));
+
+          passwordMessage.textContent = "Password changed successfully!";
+          passwordMessage.classList.add("success");
+          passwordMessage.classList.remove("error");
+
+          // Clear input fields
+          passwordForm.reset();
+        } else {
+          passwordMessage.textContent = response.message || "Failed to update password.";
+          passwordMessage.classList.remove("success");
+          passwordMessage.classList.add("error");
+        }
+      } catch (error) {
+        passwordMessage.textContent = "An error occurred. Please try again.";
+        passwordMessage.classList.remove("success");
+        passwordMessage.classList.add("error");
+      }
+    });
+  }
+
+  // Simulated backend API call
+  async function fakeApiUpdatePassword(email, newPassword) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ success: true });
+      }, 1000);
     });
   }
 });
